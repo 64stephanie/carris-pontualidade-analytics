@@ -2,6 +2,9 @@
 Escolhe automaticamente 3 paragens (inicial, meio e final) para cada linha
 da Carris Metropolitana e escreve o ficheiro config/lines.yml.
 
+Uso (a partir da pasta raiz do repositório):
+    pip install requests
+    python scripts/select_stops.py
 """
 
 import time
@@ -32,11 +35,18 @@ def get_pattern(pattern_id):
 
 
 def find_valid_pattern(line, today):
-    """Devolve o primeiro percurso da linha que está em vigor hoje."""
-    for pattern_id in line.get("pattern_ids", []):
-        pattern = get_pattern(pattern_id)
+    """
+    Devolve o primeiro percurso em vigor hoje. Se nenhum tiver a data de hoje,
+    usa o que tem mais datas: o teste das chegadas confirma depois se há dados reais.
+    """
+    patterns = [get_pattern(pid) for pid in line.get("pattern_ids", [])]
+    for pattern in patterns:
         if today in pattern.get("valid_on", []):
             return pattern
+    if patterns:
+        fallback = max(patterns, key=lambda p: len(p.get("valid_on", [])))
+        print(f"    aviso: nenhum percurso com a data de hoje, a usar {fallback['id']}")
+        return fallback
     return None
 
 

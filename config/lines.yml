@@ -42,3 +42,17 @@ lines:
       - "020489"   # inicial: Cacilhas (Terminal) P4
       - "020253"   # meio: Bº F FOMENTO R 3 VALES (ESCOLA BÁSICA)
       - "020637"   # final: COSTA CAPARICA (TORRE ARGOLAS) TER P1
+  - line_id: "4600"
+    pattern_id: "4600_2_2"
+    headsign: "Chão Duro"
+    stops:
+      - "040024"   # inicial: Barreiro (Terminal) P13
+      - "090213"   # meio: ALHOS VEDROS - ESTAÇÃO
+      - "090182"   # final: CHÃO DURO X EN 11 7
+  - line_id: "4701"
+    pattern_id: "4701_0_2"
+    headsign: "Lisboa (Oriente)"
+    stops:
+      - "090260"   # inicial: AV 1º DE MAIO - ESC MOUZINHO DA SILVEIRA
+      - "090102"   # meio: ALTO S SEBASTIÃO (EN 11 54)
+      - "060001"   # final: Gare do Oriente 25-C
