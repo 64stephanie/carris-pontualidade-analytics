@@ -1,0 +1,44 @@
+# Gerado por select_stops.py a 20261002
+lines:
+  - line_id: "1715"
+    pattern_id: "1715_1_2"
+    headsign: "Belém (Estação)"
+    stops:
+      - "172488"   # inicial: Agualva-Cacém (Estação) P6
+      - "170923"   # meio: R Timor 2
+      - "060107"   # final: Belém (Estação)
+  - line_id: "1721"
+    pattern_id: "1721_2_2"
+    headsign: "Queluz (4 Caminhos)"
+    stops:
+      - "170853"   # inicial: Massamá (Casal Olival)
+      - "170915"   # meio: R Direita Massamá 129
+      - "172499"   # final: Queluz (4 Caminhos)
+  - line_id: "2790"
+    pattern_id: "2790_0_2"
+    headsign: "Alverca (Estação)"
+    stops:
+      - "061206"   # inicial: Pç. Areeiro
+      - "071631"   # meio: En 10 (X) Estacal Novo
+      - "180041"   # final: Alverca (Estação)
+  - line_id: "2711"
+    pattern_id: "2711_0_2"
+    headsign: "Charneca"
+    stops:
+      - "060322"   # inicial: Gare do Oriente 17-B
+      - "071385"   # meio: R Liberdade 57A (B Santiago)
+      - "060231"   # final: Charneca
+  - line_id: "3508"
+    pattern_id: "3508_3_2"
+    headsign: "Cacilhas (Terminal)"
+    stops:
+      - "140129"   # inicial: FOGUETEIRO (AV 1º MAIO) GRÉMIO
+      - "140703"   # meio: CORROIOS (AV 25 ABRIL 28B) CGD
+      - "020955"   # final: Cacilhas (Terminal) P7
+  - line_id: "3022"
+    pattern_id: "3022_0_2"
+    headsign: "Costa da Caparica (Terminal)"
+    stops:
+      - "020489"   # inicial: Cacilhas (Terminal) P4
+      - "020253"   # meio: Bº F FOMENTO R 3 VALES (ESCOLA BÁSICA)
+      - "020637"   # final: COSTA CAPARICA (TORRE ARGOLAS) TER P1
