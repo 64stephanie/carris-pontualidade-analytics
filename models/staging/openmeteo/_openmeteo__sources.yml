@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: openmeteo
+    database: carris_raw
+    schema: openmeteo
+    config:
+      loaded_at_field: loaded_at
+      freshness:
+        warn_after: {count: 26, period: hour}
+        error_after: {count: 48, period: hour}
+    tables:
+      - name: weather_daily
+        description: "Daily weather per line (middle stop coordinates). Backfill since 2024 plus the last 7 days, loaded daily."
+        columns:
+          - name: line_id
+            data_type: varchar
+          - name: latitude
+            data_type: float
+          - name: longitude
+            data_type: float
+          - name: payload
+            data_type: variant
+          - name: loaded_at
+            data_type: timestamp_tz
