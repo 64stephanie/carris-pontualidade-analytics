@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: carris
+    database: carris_raw
+    schema: carris
+    tables:
+      - name: demand
+        description: "Daily validations per line. Each load contains the full history since 2024-01-01."
+
+        columns:
+          - name: line_id
+            data_type: varchar
+          - name: payload
+            data_type: variant
+          - name: loaded_at
+            data_type: timestamp_tz
+
+      - name: lines
+        description: "Full list of network lines, loaded daily. Source for the SCD2 snapshot."
+        columns:
+          - name: payload
+            data_type: variant
+          - name: loaded_at
+            data_type: timestamp_tz
+
